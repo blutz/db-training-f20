@@ -7,6 +7,7 @@ import {
 } from "react-router-dom"
 import Home from './Home'
 import HTMLPage from './HTMLPage'
+import CSSPage from './CSSPage'
 
 function App() {
   return (
@@ -17,11 +18,15 @@ function App() {
           <ul>
             <li><NavLink exact={true} to='/'>Home</NavLink></li>
             <li><NavLink to='/html'>HTML</NavLink></li>
+            <li><NavLink to='/css'>CSS</NavLink></li>
           </ul>
         </nav>
         <Switch>
           <Route path='/html'>
             <HTMLPage />
+          </Route>
+          <Route path='/css'>
+            <CSSPage />
           </Route>
           <Route path='/'>
             <Home />
@@ -29,7 +34,7 @@ function App() {
         </Switch>
       </div>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

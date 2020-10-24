@@ -3,7 +3,7 @@ import ReactSpoiler from 'react-spoiler'
 import CodeDemo from './CodeDemo'
 import style from './CodeChallenge.module.css'
 
-function CodeChallenge({title, description, descriptionImg, hint, solution, solutionDescription}) {
+function CodeChallenge({title, description, descriptionImg, hint, initialCode, solution, solutionDescription}) {
   const [solutionShown, setSolutionShown] = useState(false)
   return <section className={style.container}>
     <h3>{title}</h3>
@@ -16,7 +16,7 @@ function CodeChallenge({title, description, descriptionImg, hint, solution, solu
     {hint && <div><strong>Hint:</strong>&nbsp;
       <ReactSpoiler className='spoiler'>{hint}</ReactSpoiler>
     </div>}
-    <CodeDemo />
+    <CodeDemo initialCode={initialCode || ''} />
     <button onClick={() => setSolutionShown(!solutionShown)}>{solutionShown ? 'Hide' : 'Show'} sample solution</button>
     {solutionShown && <div>
       <CodeDemo initialCode={solution} editable={false} />

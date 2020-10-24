@@ -142,6 +142,7 @@ h1 {
       <code class='fragment fade-in-then-out'>font-family</code>
       <code class='fragment fade-in-then-out'>color</code>
       <code class='fragment fade-in-then-out'>font-weight</code>
+      <code class='fragment fade-in-then-out'>font-style</code>
       <code class='fragment fade-in-then-out'>text-decoration <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration' target='_blank' rel='noopener noreferrer' data-preview-link='false'>mdn</a></code>
       <code class='fragment fade-in-then-out'>text-transform</code>
       <code class='fragment fade-in-then-out'>text-shadow</code>
@@ -178,7 +179,11 @@ div {
     </div>
   </section>
 
-  <!-- Challenge activities -->
+  <!-- in breakout rooms of 3-4 -->
+  <section>
+    <h2>Try it out!</h2>
+    <code>training.blutz.io#css</code>
+  </section>
 
   <!-- Specificity -->
   <section>
@@ -186,23 +191,85 @@ div {
     <p>What happens to styles that affect the same element?</p>
     <p class='fragment'>Whichever selector is <em>more specific</em> wins. If they have the same specificity, whichever one is loaded <em>last</em> wins.</p>
   </section>
+
+  <section>
+    <h2>Specificity</h2>
+    <ol>
+      <li><code>!important</code></li>
+      <li>Inline styles</li>
+      <li># of IDs in selector</li>
+      <li># of classes (or other attributes) in selector</li>
+      <li># of tags in selector</li>
+    </ol>
+    <aside class='notes'>
+      <p>Do this on procreate. div || div span || .myclass span || div.myclass.second p.myclass .container || #myid</p>
+      <p>Which one has the highest specificity? Lowest?</p>
+    </aside>
+  </section>
   <!-- https://css-tricks.com/specifics-on-css-specificity/ -->
 
-
   <!-- Flexbox -->
+  <section>
+    <h2>Flexbox</h2>
+    <p>Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces.</p>
+    <p class='fragment'>Container gets <code>display: flex;</code></p>
+    <p class='fragment'>Modify children with <code>flex: 1;</code></p>
+    <a href='https://flexboxfroggy.com/' class='fragment'>Flexbox Froggy!</a>
+    <aside class='notes'>
+      Do flexbox froggy through #10
+    </aside>
+  </section>
 
+  <section>
+    <h2>Linking in a CSS file</h2>
+    <pre><code data-trim data-line-numbers='6'><script type="text/template">
+      <!doctype html>
+      <html>
+        <head>
+          <meta charset='utf-8' />
+          <title>Page title goes here</title>
+          <link rel="stylesheet" href="stylesheet.css">
+        </head>
+        <body>
+          Content goes here...
+        </body>
+      </html>
+    </script></code></pre>
+    <a href='https://csstools.github.io/sanitize.css/' class='fragment'>CSS Sanitize</a>
+    <aside class='notes'>
+      Demo developer tools on this slide (for HTML and CSS only)
+    </aside>
+  </section>
 
+  <section>
+    <h2>Your task</h2>
+    <p>Make a fake (or real) UCLA club webpage using HTML and CSS. It should:</p>
+    <ul>
+      <li>Have separate HTML and CSS files</li>
+      <li>Have at least TWO HTML pages</li>
+      <li>Use a CSS sanitize</li>
+      <li>Use at least one HTML element we didn't cover today <small>(e.g. tables, figure, code/pre, video/audio)</small></li>
+      <li>Use at least one CSS property we didn't cover today <small>(e.g. grids, :hover pseudoclass, transition, animation, gradients, filters, columns, floats, masks)</small></li>
+      <li>Use flexbox</li>
+    </ul>
+    <aside class='notes'>
+      Paste slide link to chat (training.blutz.io/slides/css.html)
+    </aside>
+  </section>
 
-
-  <!-- Make a club webpage, HTML & CSS. Pair program. -->
-<!--
-  https://screen.so/#/pricing
-https://visualstudio.microsoft.com/services/live-share/
--->
+  <section>
+    <h2>Pair programming!</h2>
+    <ul>
+      <li>Share control over Zoom</li>
+      <li>Screen-sharing software (teamviewer, screen.so)</li>
+      <li>VS Code plugin (!!) <a href='https://visualstudio.microsoft.com/services/live-share/'>https://visualstudio.microsoft.com/services/live-share/</a></li>
+    </ul>
+    <p><strong>Remember your partner's name AND breakout room number</strong></p>
+  </section>
 
   <!-- Then JS! -->
   <section>
-    <h4>Up next: <a href='css.html'>CSS</a></h4>
+    <h4>Up next: <a href='js.html'>JS</a></h4>
   </section>
 
 
