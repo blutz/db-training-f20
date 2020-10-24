@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Daily Bruin Online 2020 Intro Presentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/slides/vendor/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="/slides/vendor/reveal.js/dist/reveal.css">
+  <link rel='stylesheet' href='/slides/vendor/reveal.js/plugin/highlight/zenburn.css'>
+  <!-- WARNING: This theme has been modified. Do not update. -->
+  <link rel="stylesheet" href="/slides/vendor/reveal.js/dist/theme/black.css" id="theme">
+  <style>
+    .auto-width {
+      width: auto !important;
+    }
+    .circle {
+      border-radius: 50%;
+    }
+    .annotation {
+      border: 4px solid red;
+      position: absolute;
+      box-sizing: border-box;
+    }
+    .full-image {
+      max-height: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+    }
+    .col {
+      flex: 1;
+    }
+    .reveal .codeflask__code {
+      overflow: visible;
+    }
+    .reveal .codeflask__flatten {
+      font-size: 26px;
+      line-height: 30px;
+      overflow: visible;
+    }
+    .reveal .codeflask__lines {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    .code-preview {
+      background: white;
+      width: 100%;
+      height: 350px;
+    }
+    .code-preview-col {
+      height: 300px;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+  <!-- title -->
+  <section>
+    <h1>CSS</h1>
+    <h3 class='fragment' style='text-transform: none'>Cascading Stylesheets</h3>
+    <br />
+    <h3 class='fragment'>Says <u>what things look like</u></h3>
+  </section>
+
+  <section>
+    <h2>Two parts:</h2>
+    <ol>
+      <li><strong>Selecting</strong> HTML elements</li>
+      <li>Adding <strong>styles</strong> to them</li>
+    </ol>
+  </section>
+
+  <!-- Selectors -->
+  <section>
+    <h2>Basic Selectors</h2>
+    <ol>
+      <li class='fragment'><code>.your-class-name</code> selects everything with<br /><code>class="your-class-name"</code></li>
+      <li class='fragment'><code>#your-id-name</code> selects the element with<br /><code>id="your-id-name"</code></li>
+      <li class='fragment'><code>div</code> selects the tag by name</li>
+      <li class='fragment'><code>*</code> selects everything</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Chaining Selectors</h2>
+    <ol>
+      <li class='fragment'><code>,</code> means "or" (e.g. <code>.class1, .class2</code>)</li>
+      <li class='fragment'>Running two selectors together (e.g. <code>.class1.class2</code>) means "and"</li>
+      <li class='fragment'>Space means children and only selects the <em>rightmost</em> selector (e.g. <code>.class1 .class2</code>)</li>
+    </ol>
+  </section>
+
+  <!-- TODO: make this more realistic -->
+  <section>
+    <h2>Selector practice</h2>
+    <pre><code data-trim data-line-numbers><script type="text/template">
+      <article class='container'>
+        <h1 class='mytitle'>Example title</h1>
+        <img src='...' alt='' class='figure' id='important-image' />
+        <p class='copy'>Lorem ipsum</p>
+        <div class='wrapper'>
+          <p class='copy copy--first'>Here is some text</p>
+          <p class='copy'>Here is some more text</p>
+          <img src='...' alt='' class='figure' />
+        </div>
+      </article>
+    </script></code></pre>
+    <div class='r-stack'>
+      <code class='fragment fade-in-then-out'>.container</code>
+      <code class='fragment fade-in-then-out'>p</code>
+      <code class='fragment fade-in-then-out'>.wrapper, .copy</code>
+      <code class='fragment fade-in-then-out'>.wrapper .copy</code>
+      <code class='fragment fade-in-then-out'>p.copy.copy--first</code>
+      <code class='fragment fade-in-then-out'>#important-image</code>
+      <code class='fragment fade-in-then-out'>img#important-image</code>
+      <code class='fragment fade-in-then-out'>article#important-image</code>
+      <code class='fragment fade-in-then-out'>.container div.wrapper p.copy</code>
+    </div>
+  </section>
+
+  <!-- Text styling -->
+  <section>
+    <h2>Text styling</h2>
+    <div class='container'>
+      <div class='col code-preview-col'>
+        <div data-code-for='text-styles'><style>
+h1 {
+}
+</style>
+<h1>This is some text</h1></div>
+      </div>
+      <div class='col'>
+        <iframe id='text-styles' class='code-preview'></iframe>
+      </div>
+    </div>
+    <div class='r-stack'>
+      <code class='fragment fade-in-then-out'>font-family</code>
+      <code class='fragment fade-in-then-out'>color</code>
+      <code class='fragment fade-in-then-out'>font-weight</code>
+      <code class='fragment fade-in-then-out'>text-decoration <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration' target='_blank' rel='noopener noreferrer' data-preview-link='false'>mdn</a></code>
+      <code class='fragment fade-in-then-out'>text-transform</code>
+      <code class='fragment fade-in-then-out'>text-shadow</code>
+      <code class='fragment fade-in-then-out'>text-align</code>
+      <code class='fragment fade-in-then-out'>font-size</code>
+      <code class='fragment fade-in-then-out'>line-height</code>
+    </div>
+  </section>
+
+  <!-- Block styling -->
+  <section>
+    <h2>Block styling</h2>
+    <div class='container'>
+      <div class='col code-preview-col'>
+        <div data-code-for='block-styles'><style>
+div {
+}
+</style>
+<div style='width: 50px; height: 50px;'>Nothing here</div></div>
+      </div>
+      <div class='col'>
+        <iframe id='block-styles' class='code-preview'></iframe>
+      </div>
+    </div>
+    <div class='r-stack'>
+      <code class='fragment fade-in-then-out'>background-color</code>
+      <code class='fragment fade-in-then-out'>margin</code>
+      <code class='fragment fade-in-then-out'>padding</code>
+      <code class='fragment fade-in-then-out'>border</code>
+      <code class='fragment fade-in-then-out'>box-shadow</code>
+      <code class='fragment fade-in-then-out'>display</code>
+      <code class='fragment fade-in-then-out'>width/height</code>
+      <code class='fragment fade-in-then-out'>box-sizing <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model' target='_blank' rel='noopener noreferrer' data-preview-link='false'>mdn</a></code>
+    </div>
+  </section>
+
+  <!-- Challenge activities -->
+
+  <!-- Specificity -->
+  <section>
+    <h2>Specificity</h2>
+    <p>What happens to styles that affect the same element?</p>
+    <p class='fragment'>Whichever selector is <em>more specific</em> wins. If they have the same specificity, whichever one is loaded <em>last</em> wins.</p>
+  </section>
+  <!-- https://css-tricks.com/specifics-on-css-specificity/ -->
+
+
+  <!-- Flexbox -->
+
+
+
+
+  <!-- Make a club webpage, HTML & CSS. Pair program. -->
+<!--
+  https://screen.so/#/pricing
+https://visualstudio.microsoft.com/services/live-share/
+-->
+
+  <!-- Then JS! -->
+  <section>
+    <h4>Up next: <a href='css.html'>CSS</a></h4>
+  </section>
+
+
+
+</div>
+</div>
+<script src="/slides/vendor/reveal.js/dist/reveal.js"></script>
+<script src="/slides/vendor/reveal.js/plugin/zoom/zoom.js"></script>
+<script src="/slides/vendor/reveal.js/plugin/notes/notes.js"></script>
+<script src="/slides/vendor/reveal.js/plugin/search/search.js"></script>
+<script src="/slides/vendor/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="/slides/vendor/reveal.js/plugin/highlight/highlight.js"></script>
+<script src='/slides/vendor/codeflask.min.js'></script>
+<script>
+  Reveal.initialize({
+    controls: true,
+    controlsTutorial: false,
+    progress: true,
+    center: true,
+    hash: true,
+    hashOneBasedIndex: true,
+    previewLinks: true,
+    transitionSpeed: 'fast',
+
+    width: 1200,
+    height: 700,
+
+    // Learn about plugins: https://revealjs.com/plugins/
+    plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+  });
+
+  Reveal.on( 'ready', (e) => {
+    const codeAreas = document.querySelectorAll('div[data-code-for]')
+    for(codeArea of codeAreas) {
+      const flask = new CodeFlask(codeArea, {
+        language: 'html',
+        lineNumbers: true,
+      })
+      const iframe = document.getElementById(codeArea.dataset.codeFor)
+      if(!iframe) {
+        console.warn('Textarea misconfigured')
+        return
+      }
+      flask.onUpdate(code => {
+        iframe.srcdoc = code
+      })
+    }
+  })
+</script>
+</body>
+</html>
