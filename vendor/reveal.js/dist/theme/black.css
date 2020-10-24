@@ -173,7 +173,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal q {
   font-style: italic; }
 
-.reveal pre {
+.reveal pre:not(.codeflask__pre) {
   display: block;
   position: relative;
   width: 90%;
@@ -189,7 +189,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   font-family: monospace;
   text-transform: none; }
 
-.reveal pre code {
+.reveal pre:not(.codeflask__pre) code {
   display: block;
   padding: 5px;
   overflow: auto;

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Daily Bruin Online 2020 Intro Presentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/vendor/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="/vendor/reveal.js/dist/reveal.css">
+  <link rel='stylesheet' href='/vendor/reveal.js/plugin/highlight/zenburn.css'>
+  <!-- WARNING: This theme has been modified. Do not update. -->
+  <link rel="stylesheet" href="/vendor/reveal.js/dist/theme/black.css" id="theme">
+  <style>
+    .auto-width {
+      width: auto !important;
+    }
+    .circle {
+      border-radius: 50%;
+    }
+    .annotation {
+      border: 4px solid red;
+      position: absolute;
+      box-sizing: border-box;
+    }
+    .full-image {
+      max-height: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+    }
+    .col {
+      flex: 1;
+    }
+    .reveal .codeflask__code {
+      overflow: visible;
+    }
+    .reveal .codeflask__flatten {
+      font-size: 26px;
+      line-height: 30px;
+      overflow: visible;
+    }
+    .reveal .codeflask__lines {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    .code-preview {
+      background: white;
+      width: 100%;
+      height: 350px;
+    }
+    .code-preview-col {
+      height: 300px;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+  <!-- Welcome -->
+  <section>
+    <h1>HTML</h1>
+    <h3 class='fragment' style='text-transform: none'>HypterText <em>Markup</em> Language</h3>
+    <br />
+    <h3 class='fragment'>Says <u>what things are</u></h3>
+  </section>
+
+  <section>
+    <div class='container r-stretch'>
+      <div class='col' style='height: 100%'>
+        <div style='display: inline-block; position: relative; height: 100%; width: auto;'>
+          <img src='/assets/img/db-article.png' alt='Daily Bruin article' class='full-image' />
+          <div class='annotation circle fragment fade-in-then-semi-out' style='width: 50px; height: 50px; top: -0.2%; left: 0.5%;' data-fragment-index='1'></div>
+          <div class='annotation fragment fade-in-then-semi-out' style='width: 100%; height: 51%; top: 27%; left: 0;' data-fragment-index='3'></div>
+          <div class='annotation fragment fade-in-then-semi-out' style='width: 80%; height: 8%; bottom: 0; left: 5%;' data-fragment-index='5'></div>
+          <div class='annotation fragment fade-in-then-semi-out' style='width: 94%; height: 17%; top: 11%; left: 3%;' data-fragment-index='7'></div>
+        </div>
+      </div>
+      <ul class='col'>
+        <li class='fragment' data-fragment-index='2'>(Menu) Button</li>
+        <li class='fragment' data-fragment-index='4'>Image &amp; Caption</li>
+        <li class='fragment' data-fragment-index='6'>Paragraph</li>
+        <li class='fragment' data-fragment-index='8'>Title</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class='container r-stretch'>
+      <div class='col'>
+        <img src='/assets/img/nocss1.png' alt='' />
+      </div>
+      <div class='col'>
+        <img src='/assets/img/nocss2.png' alt='' />
+      </div>
+      <div class='col'>
+        <h4>Without CSS</h4>
+        <ul>
+          <li class='fragment'>(Menu) Button <code>&lt;button&gt;</code></li>
+          <li class='fragment'>Image &amp; Caption <code>&lt;img&gt;</code></li>
+          <li class='fragment'>Paragraph <code>&lt;p&gt;</code></li>
+          <li class='fragment'>Title <code>&lt;h1&gt;</code></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tags</h2>
+    <pre><code data-trim data-line-numbers><script type="text/template">
+      <tagname attr='value' otherattr='othervalue'>
+        Content goes here
+      </tagname>
+    </script></code></pre>
+    <div class='fragment'>
+      <h4>But some tags are self-closing:</h4>
+      <pre><code data-trim data-line-numbers><script type="text/template">
+        <tagname attr='value' otherattr='othervalue' />
+      </script></code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h3>Headings</h3>
+    <div class='container'>
+      <div class='col code-preview-col'>
+        <div data-code-for='headings'><h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6></div>
+      </div>
+      <div class='col'>
+        <iframe id='headings' class='code-preview'></iframe>
+      </div>
+    </div>
+    <p>Block-level, no required attributes</p>
+  <aside class='notes'>
+    h7?
+  </aside>
+  </section>
+
+  <section>
+    <h3>Paragraphs</h3>
+    <div class='container'>
+      <div class='col code-preview-col'>
+        <div data-code-for='paragraphs'><p>This is a really really long
+paragraph that talks about a lot
+of stuff.</p>
+
+<p>This is another paragraph that
+has imporant information.</p></div>
+      </div>
+      <div class='col'>
+        <iframe id='paragraphs' class='code-preview'></iframe>
+      </div>
+    </div>
+    <p>Block-level, no required attributes</p>
+  </section>
+
+  <section>
+    <h3>Emphasize &amp; Strong</h3>
+    <div class='container'>
+      <div class='col code-preview-col'>
+        <div data-code-for='emstrong'>We can <em>emphasize text</em>
+or <strong>indicate strong
+importance</strong></div>
+      </div>
+      <div class='col'>
+        <iframe id='emstrong' class='code-preview'></iframe>
+      </div>
+    </div>
+    <p><em>Inline</em> tags (can't contain block-level tags)</p>
+    <aside class='notes'>
+      u, mark
+    </aside>
+  </section>
+
+  <section>
+    <h3>Anchors (Links)</h3>
+    <div class='container'>
+      <div class='col code-preview-col'>
+        <div data-code-for='anchor'><a href='https://dailybruin.com'>
+Link to Daily Bruin
+</a>
+
+<br />
+
+<a href='/assets/img/luke.jpg'
+target='_blank'
+rel='noopener noreferrer'
+>
+Relative links
+</a></div>
+      </div>
+      <div class='col'>
+        <iframe id='anchor' class='code-preview'></iframe>
+      </div>
+    </div>
+    <p>Inline tag. <mark><code>href</code> required</mark>.<br /><code>target</code> and <code>rel</code> are common.</p>
+    <p><a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a' data-preview-link='false' target='_blank' rel='noopener noreferrer'>MDN &rarr;</a></p>
+    <aside class='notes'>
+      Go through MDN attributes
+    </aside>
+  </section>
+
+  <section>
+    <h3>Lists (ordered &amp; unordered)</h3>
+    <div class='container'>
+      <div class='col code-preview-col'>
+        <div data-code-for='list'><ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul></div>
+      </div>
+      <div class='col'>
+        <iframe id='list' class='code-preview'></iframe>
+      </div>
+    </div>
+    <p>Both are block-level</p>
+    <aside class='notes'>
+      ul and ol. 'start' attribute
+    </aside>
+  </section>
+
+  <section>
+    <h3>Horizontal Rule</h3>
+    <div class='container'>
+      <div class='col code-preview-col'>
+        <div data-code-for='hr'><p>Something</p>
+<hr />
+<p>Something else</p></div>
+      </div>
+      <div class='col'>
+        <iframe id='hr' class='code-preview'></iframe>
+      </div>
+    </div>
+    <p>Block-level, self-closing. Now called "thematic break"</p>
+    <aside class='notes'>
+      Style with CSS
+    </aside>
+  </section>
+
+  <section>
+    <h3>Images</h3>
+    <div class='container'>
+      <div class='col code-preview-col'>
+        <div data-code-for='img'><img
+src='/assets/img/luke.jpg'
+alt='Luke' /></div>
+      </div>
+      <div class='col'>
+        <iframe id='img' class='code-preview'></iframe>
+      </div>
+    </div>
+    <p>INLINE. <mark><code>src</code> and <code>alt</code> are required</mark>. <code>title</code> is common.</p>
+    <p><a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img' data-preview-link='false' target='_blank' rel='noopener noreferrer'>MDN &rarr;</a></p>
+    <aside class='notes'>
+      Style with CSS. Break image link to show alt attribute.
+    </aside>
+  </section>
+
+  <section>
+    <h3>"Content division" (catch-all)</h3>
+    <div class='container'>
+      <div class='col code-preview-col'>
+        <div data-code-for='div'><div>
+This doesn't do anything until
+styled with CSS. It's just
+a blank block-level element.</div>
+        </div>
+      </div>
+      <div class='col'>
+        <iframe id='div' class='code-preview'></iframe>
+      </div>
+    </div>
+    <p>Other "semantic" elements like <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code> do the same but are more descriptive</p>
+    <p><a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div' data-preview-link='false' target='_blank' rel='noopener noreferrer'>MDN &rarr;</a></p>
+    <aside class='notes'>
+      Inline corollary is span. We'll talk about that in CSS.
+    </aside>
+  </section>
+
+
+</div>
+</div>
+<script src="/vendor/reveal.js/dist/reveal.js"></script>
+<script src="/vendor/reveal.js/plugin/zoom/zoom.js"></script>
+<script src="/vendor/reveal.js/plugin/notes/notes.js"></script>
+<script src="/vendor/reveal.js/plugin/search/search.js"></script>
+<script src="/vendor/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="/vendor/reveal.js/plugin/highlight/highlight.js"></script>
+<script src='/vendor/codeflask.min.js'></script>
+<script>
+  Reveal.initialize({
+    controls: true,
+    controlsTutorial: false,
+    progress: true,
+    center: true,
+    hash: true,
+    hashOneBasedIndex: true,
+    previewLinks: true,
+    transitionSpeed: 'fast',
+
+    width: 1200,
+    height: 700,
+
+    // Learn about plugins: https://revealjs.com/plugins/
+    plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+  });
+
+  Reveal.on( 'ready', (e) => {
+    const codeAreas = document.querySelectorAll('div[data-code-for]')
+    for(codeArea of codeAreas) {
+      const flask = new CodeFlask(codeArea, {
+        language: 'html',
+        lineNumbers: true,
+      })
+      const iframe = document.getElementById(codeArea.dataset.codeFor)
+      if(!iframe) {
+        console.warn('Textarea misconfigured')
+        return
+      }
+      flask.onUpdate(code => {
+        iframe.srcdoc = code
+      })
+    }
+  })
+</script>
+</body>
+</html>
