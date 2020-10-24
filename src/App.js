@@ -10,13 +10,13 @@ import HTMLPage from './HTMLPage'
 
 function App() {
   return (
-    <Router>
+    <Router basename={'/db-training-f20'}>
       <div className="App">
         <nav>
           <h1>Daily Bruin Online Training <em>Fall 2020</em></h1>
           <ul>
-            <li><NavLink exact={true} to='/'>Home</NavLink></li>
-            <li><NavLink to='/html'>HTML</NavLink></li>
+            <li><NavLink exact={true} to={`${process.env.PUBLIC_URL}/`}>Home</NavLink></li>
+            <li><NavLink to={`${process.env.PUBLIC_URL}/html`}>HTML</NavLink></li>
           </ul>
         </nav>
         <Switch>

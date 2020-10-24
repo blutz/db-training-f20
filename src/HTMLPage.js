@@ -33,7 +33,7 @@ function HTMLPage() {
     <CodeChallenge
       title='3: News article'
       description='As shown in the image, make a news article with a title, image, byline, and a paragraph. You can grab text/images from dailybruin.com'
-      descriptionImg='/img/news-article-demo.jpg'
+      descriptionImg={`${process.env.PUBLIC_URL}/img/news-article-demo.jpg`}
       solution={`<h1>In-person instructors experience excitement, hesitation ahead of return to campus</h1>
 <img src='https://wp.dailybruin.com/images/2020/09/web.news_.inpersoncourses.CQ_.Benny_.jpg' alt='mask photo illustration' width='200'/>
 <p><strong>By Bobby Hekel</strong></p>
