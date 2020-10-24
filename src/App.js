@@ -10,7 +10,7 @@ import HTMLPage from './HTMLPage'
 
 function App() {
   return (
-    <Router basename={'/db-training-f20'}>
+    <Router>
       <div className="App">
         <nav>
           <h1>Daily Bruin Online Training <em>Fall 2020</em></h1>
