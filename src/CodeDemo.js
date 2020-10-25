@@ -71,7 +71,7 @@ function CodeDemo({initialCode, editable=true, mode='html', htmlPart}) {
     </button> }
 
     <div className={styles.resultContainer}>
-      <div className={styles.title}>Return Value</div>
+      <div className={styles.title}>Output/Return</div>
       {mode === 'js' ?
         <Fragment>
           <iframe srcDoc={`<script>
@@ -79,7 +79,10 @@ function CodeDemo({initialCode, editable=true, mode='html', htmlPart}) {
             </script>`}
             title='result'
             className={styles.resultHidden}
-            onLoad={(e) => setJsReturn(e.target.contentWindow.myFunction())}
+            onLoad={(e) => {
+              e.target.contentWindow.myFunction &&
+              setJsReturn(e.target.contentWindow.myFunction())
+            }}
           ></iframe>
           <div className={styles.jsReturn}>
             {JSON.stringify(jsReturn, getCircularReplacer())}
