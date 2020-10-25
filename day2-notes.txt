@@ -1,0 +1,28 @@
+JS Demo (including fetch)
+
+JS/JSDOM exercises
+
+Git slides
+
+React slides
+
+Reg issue project:
+* Clone Reg issue: https://github.com/dailybruin/interactive.2020.registration-issue
+* Switch to a new branch
+* Fix the apply link (in the about section)
+* Link all the article titles
+* Commit after each part (but don't push)
+
+React code-along / demo:
+* get-my-ip-address demo (from ipify.org)
+* "How long have I been on this page?"
+
+Pair programming project:
+* Use HTML, CSS, and React/JS
+* Track your project in git (preferably with a repo on github)
+* Display random Jeopardy questions from http://jservice.io/
+* Hide the "answer" until you click
+* Add a button to get a new Jeopardy question
+
+
+Post-survey
