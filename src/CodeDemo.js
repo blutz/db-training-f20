@@ -40,8 +40,14 @@ function CodeDemo({initialCode, editable=true, mode='html', htmlPart}) {
   let modeArg = 'htmlmixed'
   if(mode === 'js' || mode === 'jsdom') { modeArg = 'javascript' }
 
+  function handleKeyCombo(e) {
+    if((e.ctrlKey || e.metaKey) && e.keyCode === 13) {
+      setRunCode(code)
+    }
+  }
+
   return <div className={styles.wrapper}>
-    <div className={styles.editorContainer}>
+    <div className={styles.editorContainer} onKeyDown={handleKeyCombo}>
       <div className={styles.title}>Editor</div>
       <CodeMirror
         className={styles.editor}
