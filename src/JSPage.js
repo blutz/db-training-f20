@@ -8,8 +8,11 @@ function JSPage() {
       title='Test'
       description='hello'
       initialCode='return "Text here..."'
-      mode='js'
+      mode='jsdom'
       solution='return "Hello World"'
+      htmlPart={`
+        <div>This is a test</div>
+      `}
     />
   </Fragment>
 }
