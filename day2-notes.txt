@@ -5,6 +5,9 @@ JS/JSDOM exercises
 Git slides
 
 React slides
+jsfiddle: text box to "Say hello to..."
+  controlled input components and React.useState
+  ReactDOM.render(<App />, document.querySelector("#app"))
 
 Reg issue project:
 * Clone Reg issue: https://github.com/dailybruin/interactive.2020.registration-issue
