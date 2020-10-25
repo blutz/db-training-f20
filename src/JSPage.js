@@ -33,7 +33,7 @@ return mystr.toUpperCase().trim().split(' ')`}
     <CodeChallenge
       title='3: Harder string transformation'
       description={<Fragment>Without modifying the first line, convert this string to the array <code>["THIS", "IS", "MY", "SAMPLE", "STRING"]</code></Fragment>}
-      hint='Look up string.filter on MDN. Feel free to come back to this one at the end'
+      hint='Look up array.filter on MDN. Feel free to come back to this one at the end'
       mode='js'
       initialCode={`const mystr = '   this     is  my          sample string   '
 
