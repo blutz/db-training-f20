@@ -8,6 +8,7 @@ import {
 import Home from './Home'
 import HTMLPage from './HTMLPage'
 import CSSPage from './CSSPage'
+import JSPage from './JSPage'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <li><NavLink exact={true} to='/'>Home</NavLink></li>
             <li><NavLink to='/html'>HTML</NavLink></li>
             <li><NavLink to='/css'>CSS</NavLink></li>
+            <li><NavLink to='/js'>Javascript</NavLink></li>
           </ul>
         </nav>
         <Switch>
@@ -27,6 +29,9 @@ function App() {
           </Route>
           <Route path='/css'>
             <CSSPage />
+          </Route>
+          <Route path='/js'>
+            <JSPage />
           </Route>
           <Route path='/'>
             <Home />

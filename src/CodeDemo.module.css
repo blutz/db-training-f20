@@ -22,3 +22,24 @@
   opacity: 0.5;
   padding: 0 10px;
 }
+.resultHidden {
+  visibility: hidden;
+  height: 0;
+}
+.jsReturn {
+  flex: 1;
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  overflow: scroll;
+  font-family: monospace;
+  max-height: 400px;
+}
+.runButton {
+  padding: 30px 10px;
+  font-weight: bold;
+  flex: 0;
+  align-self: center;
+}
