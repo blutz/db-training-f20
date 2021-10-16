@@ -15,11 +15,12 @@ function App() {
     <Router>
       <div className="App">
         <nav>
-          <h1>Daily Bruin Online Training <em>Fall 2020</em></h1>
+          <h1>Daily Bruin Online Training <em>Fall 2021</em></h1>
+          <h2>Exercises</h2>
           <ul>
             <li><NavLink exact={true} to='/'>Home</NavLink></li>
-            <li><NavLink to='/html'>HTML</NavLink></li>
-            <li><NavLink to='/css'>CSS</NavLink></li>
+            <li><NavLink to='/html'>HTML (optional)</NavLink></li>
+            <li><NavLink to='/css'>CSS (optional)</NavLink></li>
             <li><NavLink to='/js'>Javascript</NavLink></li>
           </ul>
         </nav>
