@@ -1,0 +1,10 @@
+interactive.2020.registration-issue PROJECT
+
+Tasks:
+1. Fix the apply link (in about section)
+2. Remove the banner ad
+3. Add your name to the byline
+4. Display an error for API failure
+5. Change page title
+6. Make some other change!
+
