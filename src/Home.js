@@ -10,6 +10,7 @@ function Home() {
       <li><a href='/slides/css.html'>CSS</a></li>
       <li><a href='https://docs.google.com/presentation/d/1sjXNHiMxkigvD12SvLz6XNOe89u5Y4BbFOCHJoAaK_M/edit?usp=sharing'>Git</a></li>
       <li><a href='https://docs.google.com/presentation/d/1iOlrF8uuqd06nXTuriemlNTDcuYkdnNVvwmXkSNNiPU/edit?usp=sharing'>React</a></li>
+      <li><a href='https://docs.google.com/presentation/d/1wAgQ8YmcqFo9qwysK-m-5lZ8Dcikn32vo0ouuObMRxs/edit?usp=sharing'>REST APIs</a></li>
     </ul>
   </div>
 }
