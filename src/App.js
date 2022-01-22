@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div className="App">
         <nav>
-          <h1>Daily Bruin Online Training <em>Fall 2021</em></h1>
+          <h1>Daily Bruin Online Training <em>Winter 2022</em></h1>
           <h2>Exercises</h2>
           <ul>
             <li><NavLink exact={true} to='/'>Home</NavLink></li>
