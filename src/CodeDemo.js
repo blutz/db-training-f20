@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useCallback, Fragment } from 'react'
-import { Controlled as CodeMirror } from 'react-codemirror2'
+import CodeMirror from '@uiw/react-codemirror';
+import { dracula } from '@uiw/codemirror-theme-dracula'
+import { javascript } from '@codemirror/lang-javascript'
+import { html } from '@codemirror/lang-html'
 import styles from './CodeDemo.module.css'
-import 'codemirror/mode/htmlmixed/htmlmixed'
-import 'codemirror/mode/javascript/javascript'
-import 'codemirror/lib/codemirror.css'
-import 'codemirror/theme/dracula.css'
 
 // From MDN. Fixes JSON.stringify so we can use it with circular references
 const getCircularReplacer = () => {
@@ -37,8 +36,8 @@ function CodeDemo({initialCode, editable=true, mode='html', htmlPart}) {
     if(!delayedRun) { setRunCode(code) }
   }, [code, delayedRun, setRunCode])
 
-  let modeArg = 'htmlmixed'
-  if(mode === 'js' || mode === 'jsdom') { modeArg = 'javascript' }
+  let extensionsArg = [html()]
+  if(mode === 'js' || mode === 'jsdom') { extensionsArg = [javascript()]}
 
   function handleKeyCombo(e) {
     if((e.ctrlKey || e.metaKey) && e.keyCode === 13) {
@@ -52,15 +51,11 @@ function CodeDemo({initialCode, editable=true, mode='html', htmlPart}) {
       <CodeMirror
         className={styles.editor}
         value={code}
-        onBeforeChange={(_, __, value) => {
+        onChange={value => {
           if(editable) { setCode(value) }
         }}
-        options={{
-          mode: modeArg,
-          theme: 'dracula',
-          lineNumbers: true,
-          lineWrapping: true,
-        }}
+        theme={dracula}
+        extensions={extensionsArg}
       />
     </div>
 
