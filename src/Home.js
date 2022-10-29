@@ -12,6 +12,9 @@ function Home() {
       <li><a href='https://docs.google.com/presentation/d/1iOlrF8uuqd06nXTuriemlNTDcuYkdnNVvwmXkSNNiPU/edit?usp=sharing'>React</a></li>
       <li><a href='https://docs.google.com/presentation/d/1wAgQ8YmcqFo9qwysK-m-5lZ8Dcikn32vo0ouuObMRxs/edit?usp=sharing'>REST APIs</a></li>
     </ul>
+    <h2>Etc</h2>
+    <p><a href='https://docs.google.com/forms/d/e/1FAIpQLSccP1hRTzmNQJPm2AQScVdfT1zTXI6dV_cDKQYG4LGNuwFxPA/viewform'>Pre-survey!</a></p>
+    <p>Contact info: byronlutz@gmail.com</p>
   </div>
 }
 
